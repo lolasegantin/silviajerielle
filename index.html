@@ -558,3 +558,528 @@ Prenota su WhatsApp
 
 </body>
 </html>
+
+letter-spacing:0.02em;
+}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+a{text-decoration:none;color:inherit;}
+
+/* ===== NAV ===== */
+header{
+position:sticky;top:0;z-index:50;
+background:rgba(248,246,240,0.95);
+backdrop-filter:blur(8px);
+border-bottom:1px solid var(--sage-light);
+}
+nav{
+display:flex;justify-content:space-between;align-items:center;
+padding:18px 32px;max-width:var(--maxw);margin:0 auto;
+}
+.logo{
+font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;
+color:var(--moss);display:flex;align-items:center;
+letter-spacing:0.03em;
+}
+.logo-img { max-height: 40px; }
+
+nav ul{display:flex;gap:36px;list-style:none;}
+nav ul a{font-size:14px;color:var(--moss-soft);transition:color .2s;letter-spacing:.02em;}
+nav ul a:hover{color:var(--moss);}
+.nav-cta{
+display:flex;align-items:center;gap:8px;
+background:var(--moss);color:var(--cream);
+padding:10px 22px;border-radius:30px;font-size:14px;font-weight:500;
+transition:background .2s;
+}
+.nav-cta:hover{background:#3a4032;}
+@media(max-width:780px){
+nav ul{display:none;}
+}
+
+/* ===== HERO ===== */
+.hero{
+position:relative;
+padding:90px 32px 110px;
+background:linear-gradient(180deg,var(--cream) 0%,var(--cream-deep) 100%);
+}
+.hero-inner{
+max-width:var(--maxw);margin:0 auto;
+display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center;
+}
+.hero-eyebrow{
+font-size:13px;letter-spacing:.18em;text-transform:uppercase;
+color:var(--taupe);font-weight:500;margin-bottom:18px;
+display:flex;align-items:center;gap:10px;
+}
+.hero-eyebrow::before{
+content:'';display:inline-block;width:28px;height:1px;background:var(--taupe);
+}
+.hero h1{
+font-size:clamp(42px,5.5vw,64px);
+line-height:1.1;margin-bottom:22px;
+font-style:italic;font-weight:500;
+}
+.hero h1 strong{font-style:normal;font-weight:700;}
+.hero p{
+font-size:17px;color:var(--moss-soft);max-width:460px;margin-bottom:32px;
+}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;align-items:center;}
+.btn-primary{
+display:inline-flex;align-items:center;gap:10px;
+background:var(--moss);color:var(--cream);
+padding:16px 32px;border-radius:30px;font-size:15px;font-weight:500;
+transition:transform .2s,background .2s;
+}
+.btn-primary:hover{background:#3a4032;transform:translateY(-2px);}
+.btn-secondary{
+display:inline-flex;align-items:center;gap:8px;
+color:var(--moss);font-size:15px;font-weight:500;
+padding:16px 8px;border-bottom:1px solid var(--sage);
+transition:border-color .2s;
+}
+.btn-secondary:hover{border-color:var(--moss);}
+.hero-visual{
+position:relative;border-radius:24px;overflow:hidden;
+aspect-ratio:4/5;background:var(--sage-light);
+box-shadow:0 30px 60px -30px rgba(74,82,64,.35);
+}
+.hero-visual img{width:100%;height:100%;object-fit:cover;display:block;}
+.hero-visual-tag{
+position:absolute;bottom:22px;left:22px;
+background:rgba(248,246,240,.95);backdrop-filter:blur(6px);
+padding:12px 18px;border-radius:14px;
+font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:var(--moss);
+display:flex;align-items:center;gap:10px;
+}
+.leaf-dot{width:8px;height:8px;border-radius:50%;background:var(--sage);flex-shrink:0;}
+
+/* ===== SECTION SHARED ===== */
+section{padding:90px 32px;}
+.section-head{
+text-align:center;max-width:620px;margin:0 auto 56px;
+}
+.section-eyebrow{
+font-size:13px;letter-spacing:.18em;text-transform:uppercase;
+color:var(--taupe);font-weight:500;margin-bottom:14px;
+}
+.section-head h2{font-size:clamp(32px,4vw,46px);line-height:1.2;}
+.section-head p{color:var(--moss-soft);font-size:16px;margin-top:14px;}
+
+/* divider con linea */
+.divider{
+display:flex;align-items:center;justify-content:center;
+margin:0 auto 12px;
+}
+.divider .line{height:1px;width:50px;background:var(--sage);}
+
+/* ===== CHI SONO ===== */
+.about{background:var(--white);}
+.about-inner{
+display:grid;grid-template-columns:0.9fr 1.1fr;gap:64px;align-items:center;
+max-width:var(--maxw);margin:0 auto;
+}
+.about-img{
+border-radius:20px;overflow:hidden;aspect-ratio:1/1.05;
+background:var(--sage-light);
+}
+.about-img img{width:100%;height:100%;object-fit:cover;display:block;}
+.about-text h2{font-size:clamp(30px,3.8vw,42px);margin-bottom:20px;line-height:1.2;}
+.about-text p{color:var(--moss-soft);font-size:16px;margin-bottom:16px;}
+
+.about-quote{
+font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--moss);
+font-size:clamp(15px, 2.2vw, 24px);
+white-space:nowrap;
+line-height:1.6;margin:26px 0;
+padding-left:20px;border-left:2px solid var(--sage);
+overflow:hidden; text-overflow:ellipsis;
+}
+
+.about-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px;}
+.tag{
+font-size:13px;color:var(--moss);background:var(--cream-deep);
+padding:8px 16px;border-radius:20px;border:1px solid var(--sage-light);
+}
+@media(max-width:880px){
+.about-inner,.hero-inner{grid-template-columns:1fr;}
+.hero-visual{order:-1;max-width:420px;margin:0 auto;}
+.about-quote { white-space: normal; }
+}
+
+/* ===== TREATMENTS ===== */
+.treatments{background:var(--cream-deep);}
+.treat-grid{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:24px;max-width:var(--maxw);margin:0 auto;
+align-items: start;
+}
+.treat-card{
+background:var(--white);border-radius:18px;padding:32px 28px;
+border:1px solid var(--sage-light);
+transition:transform .25s,box-shadow .25s;
+}
+.treat-card:hover{
+transform:translateY(-4px);
+box-shadow:0 20px 40px -28px rgba(74,82,64,.35);
+}
+.treat-card-head{
+margin-bottom:12px;
+}
+.treat-card-head h3, .tech-row h3, .ritual-card h3{
+font-size:24px;
+font-weight:700;
+margin-bottom:6px;
+white-space:nowrap;
+}
+.treat-price{
+font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--moss);font-weight:600;
+}
+.treat-price small{font-size:13px;color:var(--taupe);font-family:'Inter',sans-serif;font-weight:400;}
+.treat-card p{font-size:15px;color:var(--moss-soft);}
+
+/* ===== TECHNICAL ===== */
+.technical{background:var(--white);}
+.tech-list{
+max-width:850px;margin:0 auto;
+border-top:1px solid var(--sage-light);
+}
+.tech-row{
+display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;
+padding:24px 8px;border-bottom:1px solid var(--sage-light);
+}
+.tech-row p{font-size:14px;color:var(--moss-soft);margin-top:4px;}
+.tech-price{
+font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--moss);text-align:right;
+min-width:80px;white-space:nowrap;
+}
+@media(max-width:600px){
+.tech-row{grid-template-columns:1fr;gap:8px;}
+.tech-price{text-align:left;}
+.treat-card-head h3, .tech-row h3, .ritual-card h3{
+font-size: clamp(18px, 4.5vw, 24px);
+}
+}
+
+/* ===== RITUALS ===== */
+.rituals{background:var(--moss);color:var(--cream);}
+.rituals .section-eyebrow{color:var(--sage-light);}
+.rituals .section-head h2{color:var(--cream);}
+.rituals .section-head p{color:#C9CDBC;}
+.ritual-grid{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:28px;max-width:var(--maxw);margin:0 auto;
+align-items: start;
+}
+.ritual-card{
+background:rgba(248,246,240,0.06);
+border:1px solid rgba(248,246,240,0.18);
+border-radius:20px;padding:38px 32px;
+}
+.ritual-card h3{color:var(--cream);font-style:italic;}
+.ritual-card p{color:#C9CDBC;font-size:15px;}
+.ritual-price{
+margin-top:18px;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--sage-light);
+}
+
+/* ===== STUDIO / FOOTER ===== */
+.studio{background:var(--cream-deep);}
+.studio-inner{
+display:grid;grid-template-columns:1fr 1fr;gap:0;
+max-width:var(--maxw);margin:0 auto;
+border-radius:24px;overflow:hidden;background:var(--white);
+box-shadow:0 30px 70px -40px rgba(74,82,64,.3);
+}
+.studio-content{padding:60px;}
+.studio-content h2{font-size:clamp(28px,3.5vw,38px);margin-bottom:18px;}
+.studio-content p{color:var(--moss-soft);font-size:16px;margin-bottom:24px;}
+.studio-info{display:flex;flex-direction:column;gap:16px;margin-bottom:32px;}
+.studio-info-row{display:flex;align-items:center;gap:14px;font-size:15px;color:var(--moss);}
+.icon-circle{
+width:38px;height:38px;border-radius:50%;background:var(--sage-light);
+display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.social-links{
+display:flex;gap:12px;margin-top:24px;
+}
+.social-links a{
+display:inline-flex;align-items:center;justify-content:center;
+width:42px;height:42px;border-radius:50%;background:var(--cream-deep);
+color:var(--moss);transition:background .2s, color .2s;
+}
+.social-links a:hover{background:var(--moss);color:var(--cream);}
+
+.studio-map{min-height:340px;position:relative;}
+.studio-map iframe{width:100%;height:100%;border:0;display:block;filter:saturate(0.85);}
+@media(max-width:880px){
+.studio-inner{grid-template-columns:1fr;}
+.studio-map{min-height:280px;}
+.studio-content{padding:44px 32px;}
+}
+
+/* ===== FINAL CTA ===== */
+.final-cta{
+text-align:center;background:var(--cream);padding-bottom:130px;
+}
+.final-cta h2{font-size:clamp(32px,4.5vw,48px);font-style:italic;margin-bottom:18px;}
+.final-cta p{color:var(--moss-soft);font-size:16px;max-width:480px;margin:0 auto 36px;}
+
+footer{
+background:var(--moss);color:#C9CDBC;text-align:center;padding:40px 32px;font-size:14px;
+}
+footer a{color:var(--sage-light);font-weight:500;text-decoration:none;transition:color 0.2s;}
+footer a:hover{color:var(--white);}
+.footer-links{
+display:flex;justify-content:center;gap:24px;margin-bottom:16px;flex-wrap:wrap;
+}
+
+@media(max-width:600px){
+section{padding:64px 24px;}
+.hero{padding:64px 24px 80px;}
+nav{padding:14px 20px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<a href="#" class="logo">
+Silvia Jerielle
+</a>
+<ul>
+<li><a href="#chi-sono">Chi sono</a></li>
+<li><a href="#trattamenti">Trattamenti</a></li>
+<li><a href="#rituali">Rituali</a></li>
+<li><a href="#studio">Dove sono</a></li>
+</ul>
+<a class="nav-cta" href="https://wa.me/393286756135?text=Ciao%20Silvia%2C%20vorrei%20prenotare%20un%20trattamento" target="_blank" rel="noopener">
+Prenota
+</a>
+</nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-inner">
+<div>
+<div class="hero-eyebrow">Studio Gingko &middot; Oriago di Mira</div>
+<h1>Un momento per <strong>te</strong>,<br>tra le mani di<br>Silvia Jerielle</h1>
+<p>Massaggi olistici e trattamenti specialistici in un ambiente caldo, silenzioso e accogliente. Tecniche tradizionali e moderne per ritrovare equilibrio tra corpo e mente.</p>
+<div class="hero-ctas">
+<a class="btn-primary" href="https://wa.me/393286756135?text=Ciao%20Silvia%2C%20vorrei%20prenotare%20un%20trattamento" target="_blank" rel="noopener">
+Prenota su WhatsApp
+</a>
+<a class="btn-secondary" href="#trattamenti">Scopri i trattamenti &rarr;</a>
+</div>
+</div>
+<div class="hero-visual">
+<img src="massaggio.jpg" alt="Trattamento di massaggio presso lo Studio Gingko">
+<div class="hero-visual-tag"><span class="leaf-dot"></span> Studio Gingko, Oriago (VE)</div>
+</div>
+</div>
+</section>
+
+<!-- CHI SONO -->
+<section class="about" id="chi-sono">
+<div class="about-inner">
+<div class="about-img">
+<img src="lettino.jpg" alt="Sala trattamenti Studio Gingko">
+</div>
+<div class="about-text">
+<div class="section-eyebrow">Chi sono</div>
+<h2>Massaggiatrice professionista, operatrice del benessere</h2>
+<p>Mi chiamo Silvia Jerielle Carraro e da anni mi dedico ai trattamenti manuali ed energetici, unendo tecniche olistiche millenarie a un approccio moderno e professionale.</p>
+<p>Ogni trattamento è pensato su misura: ascolto, presenza e cura dei dettagli, per restituirti un momento di vero riposo per il corpo e per la mente.</p>
+<div class="about-quote">
+&quot;Una mano esperta per ritrovare l'equilibrio, nel cuore di Oriago.&quot;
+</div>
+<div class="about-tags">
+<span class="tag">Tecniche olistiche</span>
+<span class="tag">Trattamenti energetici</span>
+<span class="tag">Approccio personalizzato</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- TRATTAMENTI OLISTICI -->
+<section class="treatments" id="trattamenti">
+<div class="section-head">
+<div class="divider"><span class="line"></span></div>
+<div class="section-eyebrow">Trattamenti olistici</div>
+<h2>Massaggi e rituali per il benessere globale</h2>
+<p>Tecniche che lavorano sul corpo e sull'energia, per sciogliere le tensioni e ritrovare fluidità.</p>
+</div>
+<div class="treat-grid">
+<div class="treat-card">
+<div class="treat-card-head">
+<h3>Hawaiian Lomi Lomi</h3>
+<div class="treat-price">&euro;80 <small>Singolo</small> &nbsp;&middot;&nbsp; &euro;120 <small>A 4 mani</small></div>
+</div>
+<p>Movimenti ampi e fluidi, un vero e proprio "abbraccio" per tutto il corpo.</p>
+</div>
+<div class="treat-card">
+<div class="treat-card-head">
+<h3>Massaggio Californiano</h3>
+<div class="treat-price">&euro;80 <small>Singolo</small> &nbsp;&middot;&nbsp; &euro;120 <small>A 4 mani</small></div>
+</div>
+<p>Tocco dolce e avvolgente per sciogliere stress e tensioni accumulate.</p>
+</div>
+<div class="treat-card">
+<div class="treat-card-head">
+<h3>Massaggio Maori</h3>
+<div class="treat-price">&euro;80 <small>Singolo</small> &nbsp;&middot;&nbsp; &euro;120 <small>A 4 mani</small></div>
+</div>
+<p>Trattamento rinvigorente con strumenti in legno: drena e riattiva il corpo.</p>
+</div>
+<div class="treat-card">
+<div class="treat-card-head">
+<h3>Hot Stone Massage</h3>
+<div class="treat-price">&euro;80 <small>Singolo</small> &nbsp;&middot;&nbsp; &euro;120 <small>A 4 mani</small></div>
+</div>
+<p>Pietre calde per sciogliere in profondità le tensioni muscolari più persistenti.</p>
+</div>
+<div class="treat-card">
+<div class="treat-card-head">
+<h3>Massaggio Thai Oil</h3>
+<div class="treat-price">&euro;80 <small>Singolo</small> &nbsp;&middot;&nbsp; &euro;120 <small>A 4 mani</small></div>
+</div>
+<p>Lavoro sulle linee energetiche meridiane, tra pressioni e stretching dolce.</p>
+</div>
+</div>
+</section>
+
+<!-- TRATTAMENTI TECNICI -->
+<section class="technical">
+<div class="section-head">
+<div class="divider"><span class="line"></span></div>
+<div class="section-eyebrow">Trattamenti specialistici</div>
+<h2>Tecniche mirate per esigenze specifiche</h2>
+<p>Soluzioni dedicate a gonfiori, contratture, equilibrio energetico e rituali viso.</p>
+</div>
+<div class="tech-list">
+<div class="tech-row">
+<div>
+<h3>Linfodrenaggio Vodder</h3>
+<p>Tecnica specifica per gonfiori, edemi e ritenzione idrica.</p>
+</div>
+<div class="tech-price">&euro;70</div>
+</div>
+<div class="tech-row">
+<div>
+<h3>Decontratturante</h3>
+<p>Sciogliere i blocchi muscolari e il dolore localizzato.</p>
+</div>
+<div class="tech-price">&euro;50</div>
+</div>
+<div class="tech-row">
+<div>
+<h3>Massaggio Anticellulite</h3>
+<p>Drenaggio e tonificazione dei tessuti per una pelle più compatta.</p>
+</div>
+<div class="tech-price">&euro;65</div>
+</div>
+<div class="tech-row">
+<div>
+<h3>Massaggio Rimodellante Corpo</h3>
+<p>L'obiettivo primario è il trattamento di ritenzione idrica, cellulite, adiposità localizzate e perdita di tono cutaneo; lavorando sul sistema circolatorio, linfatico e metabolico.</p>
+</div>
+<div class="tech-price">&euro;70</div>
+</div>
+<div class="tech-row">
+<div>
+<h3>Kobido</h3>
+<p>Trattamento viso giapponese: tonifica e ridona luminosità.</p>
+</div>
+<div class="tech-price">&euro;70</div>
+</div>
+</div>
+</section>
+
+<!-- RITUALI -->
+<section class="rituals" id="rituali">
+<div class="section-head">
+<div class="divider"><span class="line" style="background:var(--sage-light)"></span></div>
+<div class="section-eyebrow">Rituali speciali</div>
+<h2>Esperienze di benessere profondo</h2>
+<p>Per chi desidera andare oltre il massaggio: un viaggio sensoriale completo.</p>
+</div>
+<div class="ritual-grid">
+<div class="ritual-card">
+<h3>Aroma touch</h3>
+<p>Porta benefici all’organismo, combattendo le costanti sistemiche e ripristinando l’equilibrio. Aiuta attraverso il tocco costante e delicato, associato all’applicazione degli oli essenziali, a migliorare la salute fisica e mentale.</p>
+<div class="ritual-price">&euro;70</div>
+</div>
+<div class="ritual-card">
+<h3>Rituale Amazzonico</h3>
+<p>Rituale proveniente dai popoli indigeni del Brasile, basato su un continuo gioco di ondeggiamenti, dondolii, vibrazioni e manualità che, in sinergia con il ritmo del tamburo suonato dal vivo, provocano un profondo rilassamento.</p>
+<div class="ritual-price">&euro;180</div>
+</div>
+</div>
+</section>
+
+<!-- STUDIO + FOOTER -->
+<section class="studio" id="studio">
+<div class="section-head">
+<div class="divider"><span class="line"></span></div>
+<div class="section-eyebrow">Dove sono</div>
+<h2>Studio Gingko, Oriago (VE)</h2>
+</div>
+<div class="studio-inner">
+<div class="studio-content">
+<h2 style="font-size:26px;">Un ambiente protetto e curato</h2>
+<p>Silvia riceve presso lo Studio Gingko ad Oriago di Mira (VE), un ambiente silenzioso e curato nei minimi dettagli, pensato per permetterti di staccare davvero dalla routine quotidiana.</p>
+<div class="studio-info">
+<div class="studio-info-row">
+<div class="icon-circle"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4A5240" stroke-width="1.5"><path d="M12 21s7-6.5 7-11a7 7 0 10-14 0c0 4.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+Via Lazio 16, Mira (VE)
+</div>
+<div class="studio-info-row">
+<div class="icon-circle"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4A5240" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+silviacreiki@gmail.com
+</div>
+<div class="studio-info-row">
+<div class="icon-circle"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4A5240" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
++39 328 6756135
+</div>
+</div>
+
+<div class="social-links">
+<a href="https://www.instagram.com/jerielle_ginkgomassaggi/" target="_blank" rel="noopener" aria-label="Instagram">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+</a>
+<a href="https://www.facebook.com/profile.php?id=61591418015312" target="_blank" rel="noopener" aria-label="Facebook">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+</a>
+</div>
+
+</div>
+<div class="studio-map">
+<iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Via+Lazio+16,+Mira,+VE&output=embed"></iframe>
+</div>
+</div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+<div class="divider"><span class="line"></span></div>
+<h2>Concediti un momento di profondo benessere</h2>
+<p>Scrivimi su WhatsApp per scegliere il trattamento più adatto a te e prenotare il tuo appuntamento allo Studio Gingko.</p>
+<a class="btn-primary" href="https://wa.me/393286756135?text=Ciao%20Silvia%2C%20vorrei%20prenotare%20un%20trattamento" target="_blank" rel="noopener">
+Prenota su WhatsApp
+</a>
+</section>
+
+<footer>
+<div class="footer-links">
+<!-- Loghi Privacy Iubenda -->
+<a href="https://www.iubenda.com/privacy-policy/68262257" class="iubenda-nostyle iubenda-noiframe iubenda-embed" title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+
+<a href="https://www.iubenda.com/privacy-policy/68262257/cookie-policy" class="iubenda-nostyle iubenda-noiframe iubenda-embed" title="Cookie Policy ">Cookie Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+</div>
+
+<p>Studio Gingko &middot; Oriago di Mira (VE) &middot; <a href="mailto:silviacreiki@gmail.com">silviacreiki@gmail.com</a> &middot; <a href="https://wa.me/393286756135" target="_blank" rel="noopener">+39 328 6756135</a></p>
+</footer>
+
+</body>
+</html>
